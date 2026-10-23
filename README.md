@@ -1,4 +1,27 @@
-# Introduction
+# Haswing Helm — current project
+
+**Current touchscreen firmware: 0.1.10.** This fork now documents a working
+Waveshare touchscreen remote for the Haswing Cayman motor, with verified Stop,
+live motor feedback and optional Prop Guard.
+
+- **[Start here: current setup, everyday use and next steps](docs/CURRENT-STATUS.md)**
+- **[Download touchscreen firmware and read the flashing instructions](firmware/README.md)**
+- **[Firmware checksums](firmware/SHA256SUMS)**
+
+The guide starts with the setup as it stands today, rather than a development
+history. The classic pedal/sensor ESP32 and touchscreen remain separate projects.
+This upload contains documentation and the touchscreen application binary, not
+private configuration or the separate pedal firmware.
+
+The original Python driver and reverse-engineering notes remain below as upstream
+reference. They are not the touchscreen's ESP-IDF application source. For the
+tested touchscreen hardware and wiring, follow the current setup guide above.
+
+---
+
+# Original project reference
+
+## Introduction
 
 This repo is to document my attempts to reverse engineer the Haswing Cayman series of [trolling motor](https://www.amazon.ca/AQUOS-Haswing-Electric-Trolling-Inflatable/dp/B08WYXFVRQ/). The end goal is tie this into a raspberry pi to enable functionality like spot lock. This project was inspired by [Vanchor](https://github.com/AlexAsplund/Vanchor)
 
@@ -49,5 +72,4 @@ The command byte in the response will match what was provided in the command sen
 Motor Status | Motor Speed | Battery Level 
 -------------|-------------|--------------
 0x00, 0xFF   | 0x00->0x0a  | 0x00 -> 0x04
-
 
